@@ -3,6 +3,7 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="icon" type="image/png" href="./public/media/Logo_Light.png">
   <title>StepsCC - Tecnologia e Agilidade</title>
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -49,14 +50,26 @@
     }
     nav.scrolled { box-shadow: 0 2px 24px rgba(0,0,0,.07); }
     .nav-logo {
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
+
       font-family: var(--ff-head);
       font-size: 1.25rem;
       font-weight: 700;
       letter-spacing: .02em;
+      line-height: 1;
+
       color: var(--ink);
       text-decoration: none;
     }
-    .nav-logo span { color: var(--gold); }
+    .nav-logo img {
+      height: 46px;
+      width: auto;
+      display: block;
+    }
+    .nav-logo span { color: var(--ink); }
+    .nav-logo span .special { color: var(--gold); }
     .nav-links { display: flex; gap: 2.5rem; list-style: none; }
     .nav-links a {
       font-size: .85rem;
@@ -208,7 +221,7 @@
       font-size: 1.05rem; font-weight: 300; color: var(--ink-soft);
       max-width: 52ch; line-height: 1.8;
     }
-
+logo
     /* ── SOBRE ── */
     #sobre { background: var(--cream); }
     .sobre-grid {
@@ -320,7 +333,7 @@
       color: rgba(245,243,238,.85); font-size: .95rem; font-weight: 300;
       text-decoration: none; transition: color .2s;
     }
-    .contact-item-text a:hover { color: var(--gold-lt); }
+    .contact-item-text a:hover { color: valogor(--gold-lt); }
 
     /* form */
     .contact-form { display: flex; flex-direction: column; gap: 1rem; }
@@ -410,7 +423,10 @@
 
 <!-- NAV -->
 <nav id="navbar">
-  <a class="nav-logo" href="#hero">StepsCC<span>.</span></a>
+  <a class="nav-logo" href="#hero">
+    <img src="./public/media/Logo_Light.png" alt="StepsCC Logo" >
+    <span>StepsCC<span class="special">.</span></span>
+  </a>
   <ul class="nav-links">
     <li><a href="#sobre">Sobre</a></li>
     <li><a href="#servicos">Serviços</a></li>
